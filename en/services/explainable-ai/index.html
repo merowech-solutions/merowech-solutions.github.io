@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explainable AI (XAI), Model Auditing &amp; Trustworthy ML — Merowech Solutions</title>
+  <meta name="description" content="Faithfulness-tested Explainable AI (XAI), spurious shortcut auditing, visual analytics, and EU AI Act model transparency across tabular, deep, and time-series ML." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="canonical" href="https://merowech-solutions.de/en/services/explainable-ai/" />
+  <link rel="alternate" hreflang="en" href="https://merowech-solutions.de/en/services/explainable-ai/" />
+  <link rel="alternate" hreflang="de" href="https://merowech-solutions.de/de/leistungen/explainable-ai/" />
+  <link rel="alternate" hreflang="x-default" href="https://merowech-solutions.de/en/services/explainable-ai/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Explainable AI (XAI) &amp; Model Auditing — Merowech Solutions" />
+  <meta property="og:description" content="Quantitative Explainable AI, Clever-Hans shortcut detection, and visual diagnostics across tabular, deep, and time-series models." />
+  <meta property="og:url" content="https://merowech-solutions.de/en/services/explainable-ai/" />
+  <meta property="og:image" content="https://merowech-solutions.de/assets/img/og-card.svg" />
+
+  <script src="/assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+</head>
+<body>
+  <site-header></site-header>
+
+  <main id="main-content" class="container">
+    <section class="page-header">
+      <div class="filter-bar">
+        <a href="/en/services/machine-learning/" class="pill">01 · ML &amp; Data Science</a>
+        <a href="/en/services/explainable-ai/" class="pill is-active" aria-current="page">02 · Explainable AI (XAI)</a>
+        <a href="/en/services/ai-strategy/" class="pill">03 · AI &amp; Data Strategy</a>
+        <a href="/en/services/genai-systems/" class="pill">04 · GenAI &amp; RAG</a>
+      </div>
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/">Overview</a>
+        <span>/</span>
+        <span>Services</span>
+        <span>/</span>
+        <span>02 — Explainable AI (XAI)</span>
+      </nav>
+
+      <div class="kicker">02 — SIGNATURE PRACTICE DEEP-DIVE</div>
+      <h1 class="page-title">Explainable AI (XAI), Model Auditing &amp; Trustworthy ML</h1>
+      <p class="lead">
+        We turn opaque machine learning models into transparent, inspectable systems—combining quantitative attribution verification with human-centered visual diagnostics across tabular, deep learning, and time-series applications.
+      </p>
+    </section>
+
+    <section class="section split-section">
+      <div>
+        <h2 class="section-title" style="font-size:var(--text-xl);">Where black-box models create operational risk</h2>
+      </div>
+      <div>
+        <div class="problem-item">
+          <span class="problem-num">01</span>
+          <p class="card-body" style="font-size:var(--text-base);">Models exploit spurious correlations, data-collection artifacts, or sensor quirks ("Clever-Hans" effects) that collapse silently under real-world distribution shift.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">02</span>
+          <p class="card-body" style="font-size:var(--text-base);">Default post-hoc explanations (such as unverified SHAP or saliency maps) are deployed without faithfulness benchmarks—giving engineers and operators false confidence.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">03</span>
+          <p class="card-body" style="font-size:var(--text-base);">Regulated workflows and the EU AI Act require intelligible model logic, documented failure boundaries, and effective interfaces for human oversight.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-index mb-4">XAI ARCHITECTURE — FAITHFUL ATTRIBUTION AUDIT ACROSS TABULAR &amp; TEMPORAL ML</div>
+      <div class="diagram-frame">
+        <svg viewBox="0 0 760 195" class="diagram-svg" fill="none" role="img" aria-label="Explainable AI Attribution and Faithfulness Audit Diagram">
+          <line x1="40" y1="30" x2="500" y2="30" stroke="currentColor" stroke-opacity="0.08"/>
+          <line x1="40" y1="85" x2="500" y2="85" stroke="currentColor" stroke-opacity="0.12" stroke-dasharray="3 3"/>
+          <line x1="40" y1="140" x2="500" y2="140" stroke="currentColor" stroke-opacity="0.18"/>
+
+          <rect x="195" y="24" width="86" height="116" rx="4" style="fill: var(--accent);" fill-opacity="0.15"/>
+          <rect x="195" y="24" width="86" height="116" rx="4" style="stroke: var(--accent);" stroke-opacity="0.6" stroke-dasharray="3 2"/>
+          <text x="203" y="40" style="fill: var(--accent);" font-size="9.5" font-family="monospace">XAI ATTRIBUTION</text>
+          <text x="203" y="52" style="fill: var(--accent);" font-size="9.5" font-family="monospace">CAUSAL WINDOW</text>
+
+          <line x1="360" y1="20" x2="360" y2="148" stroke="currentColor" stroke-opacity="0.45"/>
+          <text x="302" y="18" fill="currentColor" opacity="0.6" font-size="9.5" font-family="monospace">DECISION t₀</text>
+
+          <path d="M360 76 L410 54 L460 42 L498 36 L498 112 L460 102 L410 94 Z" style="fill: var(--accent);" fill-opacity="0.18"/>
+          <path d="M45 112 Q85 106, 115 98 T180 104 T225 62 T275 70 T325 82 L360 76" stroke="currentColor" stroke-width="1.9" fill="none"/>
+          <path d="M360 76 Q415 72, 460 71 T498 73" style="stroke: var(--accent);" stroke-width="2.1" fill="none"/>
+          <circle cx="360" cy="76" r="3.5" style="fill: var(--accent);"/>
+
+          <text x="45" y="162" fill="currentColor" opacity="0.6" font-size="10" font-family="monospace">TABULAR FEATURES &amp; TEMPORAL SEQUENCES</text>
+          <text x="366" y="162" style="fill: var(--accent);" font-size="10" font-family="monospace">AUDITED PREDICTION</text>
+
+          <rect x="532" y="24" width="212" height="132" rx="6" stroke="currentColor" stroke-opacity="0.28"/>
+          <text x="548" y="47" style="fill: var(--accent);" font-size="10" font-family="monospace">XAI FAITHFULNESS AUDIT</text>
+          <text x="548" y="70" fill="currentColor" font-size="12" font-weight="600">✓ Feature &amp; Window Drivers</text>
+          <text x="548" y="86" fill="currentColor" opacity="0.68" font-size="10.5">Verified via ablation tests</text>
+          <text x="548" y="108" fill="currentColor" font-size="12" font-weight="600">✓ Shortcut Stress-Test</text>
+          <text x="548" y="124" fill="currentColor" opacity="0.68" font-size="10.5">Zero Clever-Hans leakage</text>
+          <text x="548" y="144" fill="currentColor" opacity="0.68" font-size="10" font-family="monospace">EU AI ACT AUDIT-READY</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="mb-8">
+        <div class="section-index">DELIVERABLES</div>
+        <h2 class="section-title">How we make machine learning auditable</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">Faithfulness-Verified Attributions</h3>
+          <p class="card-body">Feature, concept, and counterfactual explanations quantitatively benchmarked via perturbation, fidelity, and stability tests rather than taken at face value.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Shortcut ("Clever Hans") &amp; Bias Audits</h3>
+          <p class="card-body">Systematic discovery of spurious proxy correlations, subgroup performance gaps, and out-of-distribution failure modes before models reach production.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Visual Analytics for Domain Experts</h3>
+          <p class="card-body">Tailored diagnostic views designed around how clinicians, plant engineers, risk analysts, and executives inspect decisions—bridging ML and operations.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Time-Series &amp; Sequential XAI</h3>
+          <p class="card-body">Specialized temporal explainability revealing which historical windows, frequencies, and cross-channel interactions drive forecasts and anomaly alerts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-last">
+      <div class="cta-panel">
+        <div style="max-width:38rem;">
+          <div class="kicker" style="margin-bottom:0.55rem;">MODEL AUDIT &amp; XAI INQUIRY</div>
+          <h2 class="section-title mb-2">Need to understand, debug, or certify a critical ML model?</h2>
+          <p class="card-body">Reach out directly to discuss an independent XAI model audit or interpretable architecture design.</p>
+        </div>
+        <div class="cta-actions">
+          <div class="cta-email-group">
+            <a href="mailto:contact@merowech-solutions.de?subject=Explainable%20AI%20%26%20Model%20Audit" class="btn btn-primary btn-mono">contact@merowech-solutions.de</a>
+            <button type="button" class="btn btn-secondary btn-mono" data-copy-email>Copy email</button>
+          </div>
+          <a href="/en/services/ai-strategy/" class="btn btn-secondary btn-mono">Next: 03 · AI &amp; Data Strategy →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Merowech Solutions — Data Science, Machine Learning &amp; Explainable AI">
+  <rect width="1200" height="630" fill="#FBF6EF"/>
+  <rect x="44" y="44" width="1112" height="542" rx="16" fill="none" stroke="#E5D7C6" stroke-width="2"/>
+  <g transform="translate(96, 175) scale(1.15)">
+    <circle cx="60" cy="60" r="58" fill="#C2410C"/>
+    <path d="M 34 52 V 24 L 60 42 L 86 24 V 52" fill="none" stroke="#FFF7ED" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 34 68 V 96 L 60 78 L 86 96 V 68" fill="none" stroke="#2B1A12" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="268" y="246" font-family="Manrope, system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" letter-spacing="2" fill="#2B1A12">MEROWECH</text>
+  <text x="272" y="282" font-family="Manrope, system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" letter-spacing="12.5" fill="#7C5A47">SOLUTIONS</text>
+  <line x1="96" y1="358" x2="1104" y2="358" stroke="#E5D7C6" stroke-width="1.5"/>
+  <text x="96" y="418" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="600" letter-spacing="2.5" fill="#C2410C">DATA SCIENCE · MACHINE LEARNING · EXPLAINABLE AI</text>
+  <text x="96" y="472" font-family="Manrope, system-ui, -apple-system, sans-serif" font-size="30" font-weight="600" fill="#2B1A12">Rigorous models &amp; interpretable AI systems for lasting operational impact.</text>
+  <text x="96" y="532" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" fill="#7C5A47">merowech-solutions.de</text>
+</svg>

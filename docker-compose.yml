@@ -1,0 +1,19 @@
+services:
+  web:
+    image: nginx:1.27-alpine
+    container_name: merowech-web
+    ports:
+      - "${PORT:-8080}:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped
+
+  insights:
+    image: python:3.12-alpine
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    command: ["python3", "scripts/build_insights.py"]
+    profiles:
+      - tools

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Explainable AI für Zeitreihen: Attributionen, Counterfactuals und Modellvertrauen — Merowech Solutions</title>
+  <meta name="description" content="Wie die Dissertation unseres Gründers Udo Schlegel an der Universität Konstanz unsere Beratungspraxis für erklärbares Machine Learning und Data Science prägt." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="canonical" href="https://merowech-solutions.de/de/insights/visual-explainable-ai-fuer-zeitreihen-dissertation/" />
+  <link rel="alternate" hreflang="en" href="https://merowech-solutions.de/en/insights/visual-explainable-ai-for-time-series-dissertation/" />
+  <link rel="alternate" hreflang="de" href="https://merowech-solutions.de/de/insights/visual-explainable-ai-fuer-zeitreihen-dissertation/" />
+  <link rel="alternate" hreflang="x-default" href="https://merowech-solutions.de/en/insights/visual-explainable-ai-for-time-series-dissertation/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Merowech Solutions" />
+  <meta property="og:title" content="Visual Explainable AI für Zeitreihen: Attributionen, Counterfactuals und Modellvertrauen" />
+  <meta property="og:description" content="Wie die Dissertation unseres Gründers Udo Schlegel an der Universität Konstanz unsere Beratungspraxis für erklärbares Machine Learning und Data Science prägt." />
+  <meta property="og:url" content="https://merowech-solutions.de/de/insights/visual-explainable-ai-fuer-zeitreihen-dissertation/" />
+  <meta property="og:image" content="https://merowech-solutions.de/assets/img/og-card.svg" />
+
+  <script src="/assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Visual Explainable AI für Zeitreihen: Attributionen, Counterfactuals und Modellvertrauen",
+  "description": "Wie die Dissertation unseres Gründers Udo Schlegel an der Universität Konstanz unsere Beratungspraxis für erklärbares Machine Learning und Data Science prägt.",
+  "datePublished": "2026-11-17",
+  "inLanguage": "de",
+  "author": {
+    "@type": "Organization",
+    "name": "Merowech Solutions",
+    "url": "https://merowech-solutions.de"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Merowech Solutions",
+    "url": "https://merowech-solutions.de"
+  },
+  "mainEntityOfPage": "https://merowech-solutions.de/de/insights/visual-explainable-ai-fuer-zeitreihen-dissertation/"
+}
+  </script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main id="main-content" class="container">
+    <section class="page-header">
+      <div class="mb-6">
+        <a href="/de/insights/" class="card-cta" style="margin-top:0;">← Alle Insights</a>
+      </div>
+      <div class="kicker">FORSCHUNGSFUNDAMENT  ·  8 MIN LESEZEIT  ·  EXPLAINABLE AI × MACHINE LEARNING</div>
+      <h1 class="page-title" style="max-width:28ch;">Visual Explainable AI für Zeitreihen: Attributionen, Counterfactuals und Modellvertrauen</h1>
+      <p class="lead">Wie die Dissertation unseres Gründers Udo Schlegel an der Universität Konstanz unsere Beratungspraxis für erklärbares Machine Learning und Data Science prägt.</p>
+    </section>
+
+    <section class="section">
+      <div class="article-layout">
+        <article class="prose">
+<p>Bei Merowech Solutions ruht unsere Arbeit in <strong>Machine Learning</strong>, <strong>Data Science</strong> und <strong>Explainable AI (XAI)</strong> unmittelbar auf begutachteter wissenschaftlicher Forschung. Ein zentraler Baustein dieses Fundaments ist die Informatik-Dissertation unseres Gründers Udo Schlegel an der Universität Konstanz (Arbeitsgruppe Data Analysis and Visualization — DBVIS): <em><strong>Visual Explainable AI for Time Series Classification: The potential of attributions and counterfactuals</strong></em>.</p>
+<p>Tiefe neuronale Netze und moderne Ensemble-Verfahren erzielen auf sequenziellen und operativen Daten – von industrieller Sensortelemetrie und Energielastgängen bis hin zur medizinischen Diagnostik – herausragende Klassifikations- und Prognosegüten. Gleichzeitig bleibt ihre interne Entscheidungslogik häufig eine Black Box. Im Folgenden geben wir einen Einblick in die Kernergebnisse der Dissertation, die zugehörigen Open-Source-Bibliotheken und wie wir diese Methodik heute in produktive Machine-Learning-Projekte einbringen.</p>
+<aside class="callout"><span class="callout-title">Open-Access-Dissertation, Forschungsportal &amp; Quellcode</span><p>Die vollständige Dissertation ist frei zugänglich auf <a href="https://kops.uni-konstanz.de/entities/publication/4e108aaf-2cf9-4cfb-bc98-2730b512880b/full" target="_blank" rel="noopener noreferrer">KOPS (Universität Konstanz)</a>. Interaktive Übersichten und Publikationen finden Sie unter <a href="https://time-series-xai.dbvis.de/" target="_blank" rel="noopener noreferrer">time-series-xai.dbvis.de</a>, sämtliche PyTorch- und Visual-Analytics-Implementierungen unter <a href="https://github.com/visual-xai-for-time-series" target="_blank" rel="noopener noreferrer">github.com/visual-xai-for-time-series</a>.</p></aside>
+<h2 id="1-warum-klassische-xai-verfahren-auf-zeitreihen-zu-kurz-greifen">1. Warum klassische XAI-Verfahren auf Zeitreihen zu kurz greifen</h2>
+<p>Weit verbreitete Post-hoc-Erklärverfahren – etwa Saliency Maps, Integrated Gradients, LIME oder SHAP – wurden ursprünglich für Bilder, Text-Tokens oder unabhängige Tabellenmerkmale entworfen. Werden sie unkritisch auf kontinuierliche Zeitreihen übertragen, entstehen systematische Schwachstellen:</p>
+<ul><li><strong>Autokorrelation und Phasenverschiebungen:</strong> Einzelne Zeitpunkte tragen selten isolierte Bedeutung; entscheidend sind lokale Verlaufsformen, Steigungen, Frequenzmuster und mehrkanalige Übergänge.</li><li><strong>Visuelle Überlastung bei naiven Heatmaps:</strong> Tausende farbig hinterlegte Einzelzeitpunkte erzeugen auf langen Sequenzen oft visuelles Rauschen statt belastbarer Erkenntnisse für Fachexperten.</li><li><strong>Strukturierte Taxonomie für Zeitreihen-XAI:</strong> Die Dissertation ordnet das Forschungsfeld systematisch in <strong>zeitpunktbasierte</strong>, <strong>teilsequenzbasierte</strong> und <strong>instanzbasierte</strong> Erklärungsansätze.</li></ul>
+<h2 id="2-quantitative-pruefung-von-faithfulness-und-stabilitaet">2. Quantitative Prüfung von Faithfulness und Stabilität</h2>
+<p>Eine optisch ansprechende Relevanzkurve garantiert noch nicht, dass sie das tatsächliche Berechnungsverhalten des Modells korrekt widerspiegelt. Ein Schwerpunkt der Arbeit liegt daher auf der <strong>perturbationsbasierten Evaluierung</strong> zeitlicher Erklärungen – darunter Robustheitsmaße wie der <strong>Attribution Stability Indicator (ASI)</strong>.</p>
+<table><thead><tr><th>Prüfdimension</th><th>Zentrale Forschungsfrage</th><th>Nutzen in unseren Beratungsprojekten</th></tr></thead><tbody><tr><td>Perturbations-Faithfulness</td><td>Sinkt die Modellkonfidenz erwartungsgemäß, wenn hoch relevante Zeitfenster durch realistische Referenzen ersetzt werden?</td><td>Schützt Ihr Team vor trügerischen, ungeprüften Post-hoc-Heatmaps</td></tr><tr><td>Attributionsstabilität (ASI)</td><td>Bleiben Erklärungen unter geringfügigen, fachlich plausiblen Signalvariationen konsistent?</td><td>Trennt echte gelernte Signalmuster von instabilen Gradienten-Artefakten</td></tr><tr><td>Visuelle Kodierung</td><td>Wie lassen sich Relevanzen über einzelne Kurven und große Datensätze hinweg verzerrungsfrei darstellen?</td><td>Dense-Pixel-Ansichten und abgestimmte Linienkodierungen verhindern Fehlinterpretationen</td></tr></tbody></table>
+<p>In unseren Modell-Audits bei Merowech Solutions übertragen wir genau diesen Prüfstandard auf <strong>tabellarische ebenso wie auf sequenzielle Machine-Learning-Systeme</strong>: Keine Erklärungsoberfläche geht ohne quantitative Verifikation in den Betrieb.</p>
+<h2 id="3-attributionen-warum-und-counterfactuals-was-waere-wenn-vereinen">3. Attributionen („Warum?“) und Counterfactuals („Was-wäre-wenn?“) vereinen</h2>
+<p>Attributionen zeigen, <em>wohin</em> ein Modell blickt – welche Zeitabschnitte oder Merkmalsfenster eine Klassifikation am stärksten beeinflusst haben. In Technik, Qualitätswesen und Fachbereichen zählt jedoch ebenso die kontrastive Gegenfrage: <em><strong>Welche minimale, fachlich realistische Änderung des Verlaufs würde die Modellentscheidung umkehren?</strong></em></p>
+<p>Die Dissertation verbindet beide Perspektiven zu einem durchgängigen Ansatz aus <strong>Attributionen</strong> und <strong>Counterfactual Explanations</strong>:</p>
+<ol><li><strong>Gezieltes Aufdecken von Scheinkorrelationen:</strong> Kippt eine Prognose bereits durch minimale Änderungen außerhalb des physikalisch relevanten Bereichs, nutzt das Modell einen fragilen Shortcut (<em>Clever-Hans</em>-Effekt) statt robuster Fachzusammenhänge.</li><li><strong>Interaktive Hypothesenprüfung:</strong> <em>What-If</em>-Analysen erlauben es Ihren Fachexperten, Entscheidungsgrenzen direkt zu erproben und mit realen Prozesstoleranzen abzugleichen.</li><li><strong>Offene Referenzimplementierungen:</strong> Modulare Algorithmen und Benchmarks stehen unter <a href="https://github.com/visual-xai-for-time-series/counterfactual-explanations-for-time-series" target="_blank" rel="noopener noreferrer">counterfactual-explanations-for-time-series</a> sowie <a href="https://github.com/visual-xai-for-time-series/visual-explanations-on-time-series" target="_blank" rel="noopener noreferrer">visual-explanations-on-time-series</a> bereit.</li></ol>
+<h2 id="4-von-lokalen-einzelpruefungen-zu-globaler-visual-analytics">4. Von lokalen Einzelprüfungen zu globaler Visual Analytics</h2>
+<p>Die isolierte Betrachtung einzelner Beispiele reicht nicht aus, um systematische Modellschwächen in großen Datenbeständen zu erkennen. Durch die Kombination aus <strong>Dense-Pixel-Visualisierungen</strong> (<a href="https://github.com/visual-xai-for-time-series/dense-time-series-attributions" target="_blank" rel="noopener noreferrer">dense-time-series-attributions</a>) und zweidimensionalen Projektionen schafft die Arbeit einen nahtlosen Übergang zwischen zwei Ebenen:</p>
+<ul><li><strong>Globale Modellübersichten:</strong> Projektion datensatzweiter Attributionen und Counterfactual-Muster zur Identifikation von Modellstrategien, Grenzfällen und systematischen Fehlergruppen.</li><li><strong>Lokale Detaildiagnostik:</strong> Gezieltes Hineinzoomen in einzelne Sequenzen, Relevanzfenster und kontrastive Gegenbeispiele zur Ursachenanalyse.</li></ul>
+<h2 id="5-wie-diese-forschung-unsere-mandate-bei-merowech-solutions-staerkt">5. Wie diese Forschung unsere Mandate bei Merowech Solutions stärkt</h2>
+<p>Während die Zeitreihenklassifikation in der Dissertation als anspruchsvolles Prüffeld diente, prägt die zugrunde liegende Methodik – <strong>quantitative XAI-Validierung, kontrastives Counterfactual-Auditing und nutzerzentrierte Visual Analytics</strong> – heute unsere gesamte Beratungspraxis in Data Science und Machine Learning:</p>
+<ul><li>Systematische Prüfung produktiver <strong>tabellarischer, tiefer und zeitbasierter ML-Modelle</strong> auf Data Leakage und Scheinkorrelationen vor dem Go-Live.</li><li>Entwicklung <strong>verständlicher visueller Diagnosewerkzeuge</strong>, mit denen Fachbereiche Modellentscheidungen eigenständig nachvollziehen können.</li><li>Aufbau <strong>prüffähiger Transparenz- und Human-in-the-Loop-Prozesse</strong> für geschäftskritische Anwendungen und den EU AI Act.</li></ul>
+<h3 id="primaerquellen-open-source-ressourcen">Primärquellen &amp; Open-Source-Ressourcen</h3>
+<ul><li><strong>Dissertation im Volltext (KOPS, Universität Konstanz):</strong> <a href="https://kops.uni-konstanz.de/entities/publication/4e108aaf-2cf9-4cfb-bc98-2730b512880b/full" target="_blank" rel="noopener noreferrer">Visual Explainable AI for Time Series Classification: The potential of attributions and counterfactuals</a></li><li><strong>Forschungsportal &amp; Interaktive Übersichten:</strong> <a href="https://time-series-xai.dbvis.de/" target="_blank" rel="noopener noreferrer">time-series-xai.dbvis.de</a></li><li><strong>Open-Source GitHub-Organisation:</strong> <a href="https://github.com/visual-xai-for-time-series" target="_blank" rel="noopener noreferrer">github.com/visual-xai-for-time-series</a></li></ul>
+        </article>
+
+        <aside class="sticky-rail">
+          <div class="toc-box">
+            <div class="toc-title">INHALT</div>
+            <ul class="toc-list">
+<li><a href="#1-warum-klassische-xai-verfahren-auf-zeitreihen-zu-kurz-greifen" class="is-active">1. Warum klassische XAI-Verfahren auf Zeitreihen zu kurz greifen</a></li>
+<li><a href="#2-quantitative-pruefung-von-faithfulness-und-stabilitaet" class="">2. Quantitative Prüfung von Faithfulness und Stabilität</a></li>
+<li><a href="#3-attributionen-warum-und-counterfactuals-was-waere-wenn-vereinen" class="">3. Attributionen („Warum?“) und Counterfactuals („Was-wäre-wenn?“) vereinen</a></li>
+<li><a href="#4-von-lokalen-einzelpruefungen-zu-globaler-visual-analytics" class="">4. Von lokalen Einzelprüfungen zu globaler Visual Analytics</a></li>
+<li><a href="#5-wie-diese-forschung-unsere-mandate-bei-merowech-solutions-staerkt" class="">5. Wie diese Forschung unsere Mandate bei Merowech Solutions stärkt</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-last">
+      <div class="cta-panel">
+        <div style="max-width:38rem;">
+          <div class="kicker" style="margin-bottom:0.55rem;">FACHLICHER AUSTAUSCH</div>
+          <h2 class="section-title mb-2">Sie arbeiten an einer ähnlichen Fragestellung?</h2>
+          <p class="card-body">Schreiben Sie uns direkt per E-Mail oder vernetzen Sie sich auf LinkedIn für ein unverbindliches Fachgespräch.</p>
+        </div>
+        <div class="cta-actions">
+          <div class="cta-email-group">
+            <a href="mailto:contact@merowech-solutions.de" class="btn btn-primary btn-mono">contact@merowech-solutions.de</a>
+            <button type="button" class="btn btn-secondary btn-mono" data-copy-email>E-Mail kopieren</button>
+          </div>
+          <a href="https://www.linkedin.com/in/udo-schlegel/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-mono">linkedin.com/in/udo-schlegel ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

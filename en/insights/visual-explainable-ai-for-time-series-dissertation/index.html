@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Explainable AI for Time Series: Attributions, Counterfactuals, and Model Trust — Merowech Solutions</title>
+  <meta name="description" content="How our founder Udo Schlegel’s doctoral dissertation at the University of Konstanz shapes how we audit, debug, and explain machine learning models in practice." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="canonical" href="https://merowech-solutions.de/en/insights/visual-explainable-ai-for-time-series-dissertation/" />
+  <link rel="alternate" hreflang="en" href="https://merowech-solutions.de/en/insights/visual-explainable-ai-for-time-series-dissertation/" />
+  <link rel="alternate" hreflang="de" href="https://merowech-solutions.de/de/insights/visual-explainable-ai-fuer-zeitreihen-dissertation/" />
+  <link rel="alternate" hreflang="x-default" href="https://merowech-solutions.de/en/insights/visual-explainable-ai-for-time-series-dissertation/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Merowech Solutions" />
+  <meta property="og:title" content="Visual Explainable AI for Time Series: Attributions, Counterfactuals, and Model Trust" />
+  <meta property="og:description" content="How our founder Udo Schlegel’s doctoral dissertation at the University of Konstanz shapes how we audit, debug, and explain machine learning models in practice." />
+  <meta property="og:url" content="https://merowech-solutions.de/en/insights/visual-explainable-ai-for-time-series-dissertation/" />
+  <meta property="og:image" content="https://merowech-solutions.de/assets/img/og-card.svg" />
+
+  <script src="/assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Visual Explainable AI for Time Series: Attributions, Counterfactuals, and Model Trust",
+  "description": "How our founder Udo Schlegel’s doctoral dissertation at the University of Konstanz shapes how we audit, debug, and explain machine learning models in practice.",
+  "datePublished": "2026-11-17",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "Merowech Solutions",
+    "url": "https://merowech-solutions.de"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Merowech Solutions",
+    "url": "https://merowech-solutions.de"
+  },
+  "mainEntityOfPage": "https://merowech-solutions.de/en/insights/visual-explainable-ai-for-time-series-dissertation/"
+}
+  </script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main id="main-content" class="container">
+    <section class="page-header">
+      <div class="mb-6">
+        <a href="/en/insights/" class="card-cta" style="margin-top:0;">← All Insights</a>
+      </div>
+      <div class="kicker">RESEARCH FOUNDATION  ·  8 MIN READ  ·  EXPLAINABLE AI × MACHINE LEARNING</div>
+      <h1 class="page-title" style="max-width:28ch;">Visual Explainable AI for Time Series: Attributions, Counterfactuals, and Model Trust</h1>
+      <p class="lead">How our founder Udo Schlegel’s doctoral dissertation at the University of Konstanz shapes how we audit, debug, and explain machine learning models in practice.</p>
+    </section>
+
+    <section class="section">
+      <div class="article-layout">
+        <article class="prose">
+<p>At Merowech Solutions, our approach to <strong>Machine Learning</strong>, <strong>Data Science</strong>, and <strong>Explainable AI (XAI)</strong> rests directly on peer-reviewed research. A cornerstone of that foundation is our founder Udo Schlegel’s doctoral dissertation in Computer Science at the University of Konstanz (Data Analysis and Visualization Group — DBVIS): <em><strong>Visual Explainable AI for Time Series Classification: The potential of attributions and counterfactuals</strong></em>.</p>
+<p>Deep neural networks and modern ensemble architectures achieve state-of-the-art accuracy on sequential and operational data—from industrial sensor telemetry and energy load profiles to medical diagnostics. Yet their internal decision logic remains largely opaque, limiting trust in high-stakes environments. Below, we share the core scientific contributions of the dissertation, the open-source resources released alongside it, and how we translate these methods into production Machine Learning consulting.</p>
+<aside class="callout"><span class="callout-title">Open-Access Dissertation, Interactive Portal &amp; Code</span><p>Explore the full open-access thesis on <a href="https://kops.uni-konstanz.de/entities/publication/4e108aaf-2cf9-4cfb-bc98-2730b512880b/full" target="_blank" rel="noopener noreferrer">KOPS (University of Konstanz)</a>, browse interactive visual demonstrations at <a href="https://time-series-xai.dbvis.de/" target="_blank" rel="noopener noreferrer">time-series-xai.dbvis.de</a>, and inspect the accompanying PyTorch and visual analytics repositories at <a href="https://github.com/visual-xai-for-time-series" target="_blank" rel="noopener noreferrer">github.com/visual-xai-for-time-series</a>.</p></aside>
+<h2 id="1-why-classical-xai-falls-short-on-sequential-data">1. Why Classical XAI Falls Short on Sequential Data</h2>
+<p>Most widely adopted post-hoc explanation techniques—such as saliency maps, Integrated Gradients, LIME, or SHAP—were originally designed for static images, text tokens, or independent tabular features. Applied naively to continuous temporal data, they run into structural blind spots:</p>
+<ul><li><strong>Autocorrelation and phase shifts:</strong> Individual time steps rarely carry isolated meaning; discriminative patterns live in localized shapes, gradients, frequency bands, and multi-channel transitions.</li><li><strong>Cognitive overload in raw heatmaps:</strong> Coloring thousands of consecutive timestamps by point-wise relevance quickly produces visual clutter rather than actionable insight for domain specialists.</li><li><strong>Taxonomy of temporal explanations:</strong> To bring structure to the field, the dissertation establishes a systematic taxonomy organizing time-series XAI into <strong>time-point-based</strong>, <strong>subsequence-based</strong>, and <strong>instance-based</strong> explanation paradigms.</li></ul>
+<h2 id="2-benchmarking-attribution-faithfulness-and-stability">2. Benchmarking Attribution Faithfulness and Stability</h2>
+<p>An explanation that looks intuitive on a line chart is not necessarily faithful to what the underlying black-box classifier actually computes. A central pillar of the research is rigorous <strong>perturbation-based verification</strong> tailored to temporal structure—including robustness metrics such as the <strong>Attribution Stability Indicator (ASI)</strong>.</p>
+<table><thead><tr><th>Dimension</th><th>Core Research Question</th><th>Practical Consulting Takeaway</th></tr></thead><tbody><tr><td>Perturbation Faithfulness</td><td>Does replacing high-relevance time points or subsequences with realistic baselines degrade confidence as predicted?</td><td>Prevents teams from trusting unverified post-hoc heatmaps</td></tr><tr><td>Attribution Stability (ASI)</td><td>Do explanations remain consistent under minor, domain-plausible perturbations?</td><td>Separates genuine learned motifs from noisy gradient artifacts</td></tr><tr><td>Visual Encoding</td><td>How should attributions be rendered across single series and large cohorts?</td><td>Dense pixel views and enhanced line encodings prevent misinterpretation</td></tr></tbody></table>
+<p>In our client audits at Merowech Solutions, this benchmark-first mindset applies across <strong>both tabular Machine Learning and temporal models</strong>: we never ship an explanation layer without quantitatively verifying its fidelity first.</p>
+<h2 id="3-combining-attributions-why-with-counterfactuals-what-if">3. Combining Attributions ("Why?") with Counterfactuals ("What-If?")</h2>
+<p>Attributions highlight <em>where</em> a model looks—identifying which time steps or feature windows contributed most to a classification. Yet engineers, clinicians, and plant operators equally need contrastive answers: <em><strong>What minimal, realistic change in the signal would flip the model’s decision to another class?</strong></em></p>
+<p>The dissertation bridges both worlds by uniting <strong>attributions</strong> and <strong>counterfactual explanations</strong> over time:</p>
+<ol><li><strong>Error and shortcut discovery:</strong> If minimal modifications outside the physically relevant regime flip a prediction, the model is exploiting a spurious correlation (<em>Clever-Hans</em> effect) rather than domain mechanics.</li><li><strong>Actionable hypothesis testing:</strong> Interactive <em>what-if</em> exploration allows domain experts to probe decision boundaries directly and test whether learned thresholds align with physical tolerances.</li><li><strong>Open-source reproducibility:</strong> Modular algorithms and benchmarks are openly available in <a href="https://github.com/visual-xai-for-time-series/counterfactual-explanations-for-time-series" target="_blank" rel="noopener noreferrer">counterfactual-explanations-for-time-series</a> and <a href="https://github.com/visual-xai-for-time-series/visual-explanations-on-time-series" target="_blank" rel="noopener noreferrer">visual-explanations-on-time-series</a>.</li></ol>
+<h2 id="4-from-local-inspection-to-global-visual-analytics">4. From Local Inspection to Global Visual Analytics</h2>
+<p>Inspecting one prediction at a time cannot reveal systematic model weaknesses across millions of operational records. By combining <strong>dense pixel visualizations</strong> (<a href="https://github.com/visual-xai-for-time-series/dense-time-series-attributions" target="_blank" rel="noopener noreferrer">dense-time-series-attributions</a>) with dimensionality-reduced global projections, the dissertation demonstrates how analysts can move seamlessly between:</p>
+<ul><li><strong>Global behavior overviews:</strong> Projecting dataset-wide attributions and counterfactual shifts into 2D visual spaces to uncover clusters of model strategies, boundary cases, and systematic misclassifications.</li><li><strong>Local sample diagnostics:</strong> Drilling down into individual sequences, attribution bands, and counterfactual trajectories to verify root causes.</li></ul>
+<h2 id="5-how-this-research-powers-our-work-at-merowech-solutions">5. How This Research Powers Our Work at Merowech Solutions</h2>
+<p>While time-series classification served as the rigorous testbed of the dissertation, the underlying methodology—<strong>quantitative XAI evaluation, contrastive counterfactual auditing, and human-centered visual diagnostics</strong>—strengthens every Machine Learning and Data Science system we build with clients:</p>
+<ul><li>Auditing production <strong>tabular, deep learning, and time-series models</strong> for data leakage and spurious shortcuts prior to rollout.</li><li>Designing <strong>operator-ready visual diagnostic tools</strong> so domain specialists can validate model behavior without digging through raw tensors.</li><li>Establishing <strong>auditable transparency and human-oversight workflows</strong> ready for high-stakes operations and the EU AI Act.</li></ul>
+<h3 id="primary-references-open-resources">Primary References &amp; Open Resources</h3>
+<ul><li><strong>Doctoral Dissertation (KOPS, University of Konstanz):</strong> <a href="https://kops.uni-konstanz.de/entities/publication/4e108aaf-2cf9-4cfb-bc98-2730b512880b/full" target="_blank" rel="noopener noreferrer">Visual Explainable AI for Time Series Classification: The potential of attributions and counterfactuals</a></li><li><strong>Research Portal &amp; Interactive Demos:</strong> <a href="https://time-series-xai.dbvis.de/" target="_blank" rel="noopener noreferrer">time-series-xai.dbvis.de</a></li><li><strong>Open-Source GitHub Organization:</strong> <a href="https://github.com/visual-xai-for-time-series" target="_blank" rel="noopener noreferrer">github.com/visual-xai-for-time-series</a></li></ul>
+        </article>
+
+        <aside class="sticky-rail">
+          <div class="toc-box">
+            <div class="toc-title">ON THIS PAGE</div>
+            <ul class="toc-list">
+<li><a href="#1-why-classical-xai-falls-short-on-sequential-data" class="is-active">1. Why Classical XAI Falls Short on Sequential Data</a></li>
+<li><a href="#2-benchmarking-attribution-faithfulness-and-stability" class="">2. Benchmarking Attribution Faithfulness and Stability</a></li>
+<li><a href="#3-combining-attributions-why-with-counterfactuals-what-if" class="">3. Combining Attributions (&quot;Why?&quot;) with Counterfactuals (&quot;What-If?&quot;)</a></li>
+<li><a href="#4-from-local-inspection-to-global-visual-analytics" class="">4. From Local Inspection to Global Visual Analytics</a></li>
+<li><a href="#5-how-this-research-powers-our-work-at-merowech-solutions" class="">5. How This Research Powers Our Work at Merowech Solutions</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-last">
+      <div class="cta-panel">
+        <div style="max-width:38rem;">
+          <div class="kicker" style="margin-bottom:0.55rem;">TECHNICAL EXCHANGE</div>
+          <h2 class="section-title mb-2">Working on a related machine learning or XAI challenge?</h2>
+          <p class="card-body">Reach out directly via email or connect on LinkedIn for a straightforward technical discussion.</p>
+        </div>
+        <div class="cta-actions">
+          <div class="cta-email-group">
+            <a href="mailto:contact@merowech-solutions.de" class="btn btn-primary btn-mono">contact@merowech-solutions.de</a>
+            <button type="button" class="btn btn-secondary btn-mono" data-copy-email>Copy email</button>
+          </div>
+          <a href="https://www.linkedin.com/in/udo-schlegel/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-mono">linkedin.com/in/udo-schlegel ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

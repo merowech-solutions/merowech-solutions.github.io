@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Merowech Solutions — Insights (English)</title>
+    <link>https://merowech-solutions.de/en/insights/</link>
+    <description>Technical essays on Data Science, Machine Learning, and Explainable AI.</description>
+    <language>en</language>
+    <item>
+      <title>Visual Explainable AI for Time Series: Attributions, Counterfactuals, and Model Trust</title>
+      <link>https://merowech-solutions.de/en/insights/visual-explainable-ai-for-time-series-dissertation/</link>
+      <guid>https://merowech-solutions.de/en/insights/visual-explainable-ai-for-time-series-dissertation/</guid>
+      <pubDate>Tue, 17 Nov 2026 09:00:00 +0100</pubDate>
+      <description>How our founder Udo Schlegel’s doctoral dissertation at the University of Konstanz shapes how we audit, debug, and explain machine learning models in practice.</description>
+    </item>
+  </channel>
+</rss>
